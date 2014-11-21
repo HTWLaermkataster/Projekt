@@ -176,5 +176,10 @@ namespace Projekt_Laerm
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
