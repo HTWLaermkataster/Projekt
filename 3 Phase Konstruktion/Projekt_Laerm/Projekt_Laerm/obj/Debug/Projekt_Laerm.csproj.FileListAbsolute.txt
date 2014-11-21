@@ -16,3 +16,12 @@ C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projek
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.Form1.resources
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.Properties.Resources.resources
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.csproj.GenerateResource.Cache
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\bin\Debug\Projekt_Laerm.exe.config
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.exe
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.pdb
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\bin\Debug\Projekt_Laerm.exe
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\bin\Debug\Projekt_Laerm.pdb
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.csprojResolveAssemblyReference.cache
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.Form1.resources
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.Properties.Resources.resources
+C:\Users\Jennie Marlene\Documents\GitHub\Projekt\3 Phase Konstruktion\Projekt_Laerm\Projekt_Laerm\obj\Debug\Projekt_Laerm.csproj.GenerateResource.Cache

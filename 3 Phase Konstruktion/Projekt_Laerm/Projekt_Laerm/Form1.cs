@@ -151,5 +151,30 @@ namespace Projekt_Laerm
                 myAccessConn.Close();
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged_1(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
