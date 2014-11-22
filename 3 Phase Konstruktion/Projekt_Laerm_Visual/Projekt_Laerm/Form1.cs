@@ -50,13 +50,13 @@ namespace Projekt_Laerm
         {
             this.pictureBox1.MouseMove += new MouseEventHandler(pictureBox1_MouseMove);
             this.pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_MouseClick);
-            this.Size = new System.Drawing.Size(AuflX + 300, AuflY + 100);
-            this.pictureBox1.Size = new System.Drawing.Size(AuflX, AuflY);
+            //this.Size = new System.Drawing.Size(AuflX + 300, AuflY + 100);
+            //this.pictureBox1.Size = new System.Drawing.Size(AuflX, AuflY);
 
-            aTimer = new System.Timers.Timer();
-            aTimer.Elapsed += new ElapsedEventHandler(BildSetzen);
-            aTimer.Interval = 20;                                           // alle 20 ms die Mal-Prozedur aufrufen -> entspricht 50 Hertz
-            aTimer.Enabled = true;
+            //aTimer = new System.Timers.Timer();
+            //aTimer.Elapsed += new ElapsedEventHandler(BildSetzen);
+            //aTimer.Interval = 20;                                           // alle 20 ms die Mal-Prozedur aufrufen -> entspricht 50 Hertz
+            //aTimer.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -178,6 +178,11 @@ namespace Projekt_Laerm
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
