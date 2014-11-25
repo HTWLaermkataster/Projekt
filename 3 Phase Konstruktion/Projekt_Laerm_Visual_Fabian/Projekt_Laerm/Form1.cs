@@ -55,10 +55,10 @@ namespace Projekt_Laerm
             //this.Size = new System.Drawing.Size(AuflX + 300, AuflY + 100);
             //this.pictureBox1.Size = new System.Drawing.Size(AuflX, AuflY);
 
-            aTimer = new System.Timers.Timer();
+            /*aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(BildSetzen);
             aTimer.Interval = 20;                                           // alle 20 ms die Mal-Prozedur aufrufen -> entspricht 50 Hertz
-            aTimer.Enabled = true;
+            aTimer.Enabled = true;*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,6 +77,7 @@ namespace Projekt_Laerm
         {
             xpos = e.X;
             ypos = e.Y;
+            BildSetzen(null, null);
 
             label1.Text = "XPosition: " + xpos.ToString() + ", YPosition: " + ypos.ToString();
         }
@@ -118,6 +119,15 @@ namespace Projekt_Laerm
                         SetPixel(x, y, 0x7f180018);
 
             SetKreis(xpos, ypos, 15, 0x7f3f6622);
+            for (x = 0; x < xpos; x++)
+            {
+                SetPixel(x, ypos, 0x111111);
+            }
+
+            for (y = ypos; y < AuflY; y++)
+            {
+                SetPixel(xpos, y, 0x111111);
+            }
 
             unsafe
             {
@@ -134,7 +144,8 @@ namespace Projekt_Laerm
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             //Datenbankverbindung();
-            SetKreis(xpos, ypos, 15, 0x3f6622);
+            SetKreis(xpos, ypos, 10, 0xff6622);
+
         }
 
         private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
