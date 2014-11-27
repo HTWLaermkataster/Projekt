@@ -19,19 +19,19 @@ namespace Projekt_Laerm
         const int AuflX = 512;
         const int AuflY = 512;
 
-        int[] Data = new int[AuflX * AuflY];
-        int[] DataHG = new int[AuflX * AuflY];
+        uint[] Data = new uint[AuflX * AuflY];
+        uint[] DataHG = new uint[AuflX * AuflY];
 
         int xpos, ypos;
         System.Timers.Timer aTimer;
 
-        public void SetPixel(int x, int y, int Farbe)
+        public void SetPixel(int x, int y, uint Farbe)
         {
             if (x < AuflX && x > 0 && y < AuflY && y > 0)
                 Data[x + y * AuflX] = Farbe;
         }
 
-        public void SetKreis(int xpos, int ypos, int rad, int Farbe)
+        public void SetKreis(int xpos, int ypos, int rad, uint Farbe)
         {
             int x, y;
 
@@ -48,12 +48,36 @@ namespace Projekt_Laerm
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            System.Drawing.Color Farbe;
+            int x, y;
+            uint F;
+
             this.pictureBox1.MouseMove += new MouseEventHandler(pictureBox1_MouseMove);
             this.pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_MouseClick);
             this.pictureBox2.MouseMove += new MouseEventHandler(pictureBox2_MouseMove);
             this.pictureBox2.MouseClick += new MouseEventHandler(pictureBox2_MouseClick);
             //this.Size = new System.Drawing.Size(AuflX + 300, AuflY + 100);
             //this.pictureBox1.Size = new System.Drawing.Size(AuflX, AuflY);
+
+            for (y = 0; y < AuflY; y++)
+                for (x = 0; x < AuflX; x++)
+                {
+                    Farbe = ((Bitmap)pictureBox2.Image).GetPixel(x, y);
+                    F = 0;
+                    F = (uint)Farbe.A;
+                    F = F << 8;
+                    F += (uint)Farbe.R;
+                    F = F << 8;
+                    F += (uint)Farbe.G;
+                    F = F << 8;
+                    F += (uint)Farbe.B;
+                    //F = (uint)Farbe.A << 24 + Farbe.R << 16 + Farbe.G << 8 + Farbe.B;
+                    //F = 0xff0000ff;
+                    DataHG[x + 512 * y] = F;
+                    //DataHG[x + 512 * y] = F + Farbe.B;
+                }
+
 
             /*aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(BildSetzen);
@@ -85,8 +109,8 @@ namespace Projekt_Laerm
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         { //if (e.Button == MouseButtons.Left) Werte[Jahr] = Wert;
             SetKreis(xpos, ypos, 15, 0x7fff6622);
-                        aTimer.Enabled = false;             // Timer abschalten und 30 ms warten. Dann Hintergrund neu zeichnen und Timer wieder anschalten
-                        Thread.Sleep(30);
+                        //aTimer.Enabled = false;             // Timer abschalten und 30 ms warten. Dann Hintergrund neu zeichnen und Timer wieder anschalten
+                        //Thread.Sleep(30);
 
             //Hintergrund();
             //            aTimer.Enabled = true;
@@ -109,14 +133,21 @@ namespace Projekt_Laerm
 
             // Bild generieren
 
+            System.Drawing.Color Farbe;
             int x, y;
 
-            for (y = 0; y < AuflY; y ++)
+            /*for (y = 0; y < AuflY; y ++)
                 for (x = 0; x < AuflX; x++)
                     if ((y & 0x3f) == 0 || (x & 0x3f) == 0)
                         SetPixel(x, y, 0x7f880048);
                     else
-                        SetPixel(x, y, 0x7f180018);
+                        SetPixel(x, y, 0x7f180018);*/
+
+            for (y = 0; y < AuflY; y++)
+                for (x = 0; x < AuflX; x++)
+                {
+                    Data[x + 512 * y] = DataHG[x + 512 * y];
+                }
 
             SetKreis(xpos, ypos, 15, 0x7f3f6622);
             for (x = 0; x < xpos; x++)
@@ -131,7 +162,7 @@ namespace Projekt_Laerm
 
             unsafe
             {
-                fixed (int* pointer = Data)
+                fixed (uint* pointer = Data)
                 {
                     System.IntPtr ptr = new System.IntPtr(pointer);
                     System.Drawing.Bitmap flag = new System.Drawing.Bitmap(AuflX, AuflY, AuflX * 4, PixelFormat.Format32bppArgb, ptr);
@@ -241,6 +272,11 @@ namespace Projekt_Laerm
             //Application.Run(new Form2());
             //Form2.ActiveForm.ShowDialog();
 //            Form2.ActiveForm.Visible = true;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
