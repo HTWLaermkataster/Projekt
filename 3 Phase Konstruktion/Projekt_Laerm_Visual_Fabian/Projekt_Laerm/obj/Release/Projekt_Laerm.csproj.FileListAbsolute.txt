@@ -1,0 +1,10 @@
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\bin\Release\Projekt_Laerm.exe.config
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.csprojResolveAssemblyReference.cache
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.Form1.resources
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.Form2.resources
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.Properties.Resources.resources
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.csproj.GenerateResource.Cache
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\bin\Release\Projekt_Laerm.exe
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\bin\Release\Projekt_Laerm.pdb
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.exe
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Release\Projekt_Laerm.pdb

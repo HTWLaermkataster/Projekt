@@ -1,0 +1,13 @@
+Sehr geehrte Damen,
+
+Falls Ihr am Wochenende nichts zu tun habt, könnt Ihr folgende Sachen programmieren:
+
+Es wäre toll, wenn Ihr bis zum nächsten Dienstag ein Windows-Form entwickeln könntet, welches Dezibel Werte und dazu Zeitangaben 
+verwaltet und die Zeitangaben als als UNIX Timestamp auf dem Server speichert.
+
+Dazu dann noch ein Form welches 9 Messtationen mit Bezeichnung als VARCHAR, X- und Y-Kooardinate als INTEGER auf dem Server speichert und die
+Daten auch in das Programm lädt.
+
+schöne Zeit.
+
+Fabian

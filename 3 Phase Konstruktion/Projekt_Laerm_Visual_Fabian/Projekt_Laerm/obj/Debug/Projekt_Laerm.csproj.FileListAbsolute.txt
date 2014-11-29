@@ -40,7 +40,6 @@ C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.pdb
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\bin\Debug\Projekt_Laerm.exe
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\bin\Debug\Projekt_Laerm.pdb
-C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.csprojResolveAssemblyReference.cache
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Form1.resources
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Form2.resources
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Properties.Resources.resources
