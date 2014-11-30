@@ -1,3 +1,19 @@
+---------------------------------------------------------------------------------------------
+
+Hallo Unbekannte,
+
+ich benutze das Verzeichnis
+
+3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm
+
+um meine Änderungen zu synchronisieren.
+
+Außerhalb dieses Verzeichnisses führe ich keine Änderungen durch. Wenn jeder ein eigenes Verzeichnis hat, kommen wir uns nicht in die Quere.
+
+Fabian
+
+---------------------------------------------------------------------------------------------
+
 Sehr geehrte Damen,
 
 Falls Ihr am Wochenende nichts zu tun habt, könnt Ihr folgende Sachen programmieren:
@@ -11,3 +27,4 @@ Daten auch in das Programm lädt.
 schöne Zeit.
 
 Fabian
+
