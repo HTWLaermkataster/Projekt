@@ -44,3 +44,6 @@ C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Form2.resources
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Properties.Resources.resources
 C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.csproj.GenerateResource.Cache
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.csprojResolveAssemblyReference.cache
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Karten_verwalten.resources
+C:\Media\Uni\ProjektManagement\Projekt\3 Phase Konstruktion\Projekt_Laerm_Visual_Fabian\Projekt_Laerm\obj\Debug\Projekt_Laerm.Form3.resources

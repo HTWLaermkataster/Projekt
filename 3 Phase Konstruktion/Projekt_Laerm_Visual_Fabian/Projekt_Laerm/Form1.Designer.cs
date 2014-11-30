@@ -30,11 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,78 +52,57 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(541, 77);
+            this.button2.Location = new System.Drawing.Point(956, 2);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 19);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Daten laden";
+            this.button2.Text = "Daten verwalten";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(541, 100);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 19);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Daten speichern";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(541, 497);
+            this.button5.Location = new System.Drawing.Point(389, 2);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(134, 19);
             this.button5.TabIndex = 7;
-            this.button5.Text = "Messpunkt auswählen";
+            this.button5.Text = "Messpunkte verwalten";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(928, 548);
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(706, 563);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(264, 19);
+            this.button6.Size = new System.Drawing.Size(264, 22);
             this.button6.TabIndex = 8;
-            this.button6.Text = "Beenden";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Text = "Programm beenden";
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(541, 29);
+            this.button4.Location = new System.Drawing.Point(249, 2);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(135, 20);
             this.button4.TabIndex = 23;
-            this.button4.Text = "Karte laden";
+            this.button4.Text = "Karte verwalten";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(541, 53);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(135, 20);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "Karte sichern";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(277, 551);
+            this.label1.Location = new System.Drawing.Point(8, 548);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(509, 13);
+            this.label1.Size = new System.Drawing.Size(532, 13);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Mit der linken Maustaste setzen Sie Messpunkte und mit der rechten Maustaste verw" +
-    "alten Sie Messpunkte";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Mit der linken Maustaste wählen Sie Messpunkte aus und mit der rechten Maustaste " +
+    "verwalten Sie Messpunkte";
             // 
             // label4
             // 
@@ -135,30 +112,32 @@
             this.label4.Size = new System.Drawing.Size(185, 13);
             this.label4.TabIndex = 27;
             this.label4.Text = "Karte mit Messpunkten - Messpunkt 1";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(807, 551);
+            this.label6.Location = new System.Drawing.Point(576, 548);
+            this.label6.MinimumSize = new System.Drawing.Size(200, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.Size = new System.Drawing.Size(200, 13);
             this.label6.TabIndex = 29;
-            this.label6.Text = "21.11.2014 15:30";
+            this.label6.Text = "Datum Min";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1231, 551);
+            this.label7.Location = new System.Drawing.Point(894, 548);
+            this.label7.MinimumSize = new System.Drawing.Size(200, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(200, 13);
             this.label7.TabIndex = 30;
-            this.label7.Text = "22.11.2014 15:30";
+            this.label7.Text = "Datum Max";
             // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.LawnGreen;
-            this.button8.Location = new System.Drawing.Point(541, 520);
+            this.button8.Location = new System.Drawing.Point(11, 563);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(134, 21);
@@ -169,7 +148,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(538, 458);
+            this.label9.Location = new System.Drawing.Point(330, 567);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
@@ -183,7 +162,7 @@
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(541, 474);
+            this.numericUpDown1.Location = new System.Drawing.Point(389, 565);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -202,12 +181,11 @@
             0,
             0,
             0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(807, 9);
+            this.label5.Location = new System.Drawing.Point(576, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(269, 13);
             this.label5.TabIndex = 28;
@@ -216,7 +194,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(810, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(579, 29);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(512, 512);
@@ -238,7 +216,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(764, 525);
+            this.label2.Location = new System.Drawing.Point(548, 528);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 43;
@@ -247,7 +225,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(764, 33);
+            this.label3.Location = new System.Drawing.Point(542, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 42;
@@ -257,7 +235,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 572);
+            this.ClientSize = new System.Drawing.Size(1112, 591);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
@@ -267,14 +246,11 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -291,12 +267,10 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
