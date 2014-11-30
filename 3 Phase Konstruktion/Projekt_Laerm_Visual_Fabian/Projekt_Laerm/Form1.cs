@@ -17,14 +17,16 @@ namespace Projekt_Laerm
 {
     public partial class Form1 : Form
     {
-        const int AuflX = 512;
-        const int AuflY = 512;
-
         const int MaxDatensätze = 100;
+        int M;                                                                              //Ist Mauszeiger über Messwert, dann >= 0
+        public static double Form2return;
 
         string[] MS = new string[MaxDatensätze];
         int[] TimeStamp = new int[MaxDatensätze];
-        double[] dB = new double[MaxDatensätze];
+        double[] dB = new double[MaxDatensätze]; 
+        
+        const int AuflX = 512;
+        const int AuflY = 512;
 
         int MinWert = 0, MaxWert = 0;
         string Pfad = "C:\\Media\\Uni\\ProjektManagement\\Projekt\\3 Phase Konstruktion\\Projekt_Laerm_Visual_Fabian\\Projekt_Laerm\\BDB.TXT";
@@ -37,8 +39,9 @@ namespace Projekt_Laerm
         uint[] Data2 = new uint[AuflX * AuflY];
         uint[] Data2HG = new uint[AuflX * AuflY];
 
+        int[] Messungen = new int[AuflX * AuflY];
+
         int xpos, ypos, xpos2, ypos2;
-        System.Timers.Timer aTimer;
 
         public void SetPixel(int x, int y, uint Farbe)
         {
@@ -59,14 +62,18 @@ namespace Projekt_Laerm
                     if (Math.Sqrt((x - xpos) * (x - xpos) + (y - ypos) * (y - ypos)) < rad)
                         SetPixel(x, y, Farbe);
         }
-        public void SetKreis2(int xpos, int ypos, int rad, uint Farbe)
+        public void SetKreis2(int xpos, int ypos, int rad, int Messung, uint Farbe)
         {
             int x, y;
 
             for (x = xpos - rad * 2; x < xpos + rad * 2; x++)
                 for (y = ypos - rad * 2; y < ypos + rad * 2; y++)
                     if (Math.Sqrt((x - xpos) * (x - xpos) + (y - ypos) * (y - ypos)) < rad)
+                    {
                         SetPixel2(x, y, Farbe);
+                        if ( Messung != -1 && x > 0 && x < AuflX && y > 0 && y < AuflY)
+                             Messungen[x + y * 512] = Messung;
+                    }
         }
         public Form1()
         {
@@ -109,6 +116,8 @@ namespace Projekt_Laerm
                     F = F << 8;
                     F += (uint)Farbe.B;
                     Data2HG[x + AuflY * y] = F;
+
+                    Messungen[x + AuflY * y] = -1;
                 }
 
             DatenausDateilesen();
@@ -128,7 +137,7 @@ namespace Projekt_Laerm
 
             BildSetzen2(null,null);
         }
-        void pictureBox1_MouseMove(object sender, MouseEventArgs e) 
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e) 
         {
             xpos = e.X;
             ypos = e.Y;
@@ -136,13 +145,16 @@ namespace Projekt_Laerm
 
             label1.Text = "XPosition: " + xpos.ToString() + ", YPosition: " + ypos.ToString();
         }
-        void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
         {
             xpos2 = e.X;
             ypos2 = e.Y;
-            BildSetzen2(null, null);
+
+            M = Messungen[xpos2 + ypos2 * AuflY];
 
             label1.Text = "XPosition: " + xpos2.ToString() + ", YPosition: " + ypos2.ToString();
+
+            BildSetzen2(null, null);
         }
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         { //if (e.Button == MouseButtons.Left) Werte[Jahr] = Wert;
@@ -162,7 +174,7 @@ namespace Projekt_Laerm
         }
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         { //if (e.Button == MouseButtons.Left) Werte[Jahr] = Wert;
-            SetKreis2(xpos, ypos, 15, 0x7fff6622);
+            //SetKreis2(xpos, ypos, 15, 0x7fff6622);
             //            aTimer.Enabled = false;             // Timer abschalten und 30 ms warten. Dann Hintergrund neu zeichnen und Timer wieder anschalten
             //            Thread.Sleep(30);
 
@@ -172,15 +184,21 @@ namespace Projekt_Laerm
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Form2 DatenDialog = new Form2();
-            //string Text;
-
-            if (DatenDialog.ShowDialog(this) == DialogResult.OK)
+            if (M >= 0)
             {
-                //Text = DatenDialog.p;
-            }
+                Form2 DatenDialog = new Form2(M, TimeStamp[M], dB[M]);
+                //string Text;
 
-            DatenDialog.Dispose();
+                if (DatenDialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    //DatenDialog.
+                    //Text = DatenDialog.p;
+                }
+
+                DatenDialog.Dispose();
+                dB[M] = Form2return;
+                BildSetzen2(null,null);
+            }
             //Form.ActiveForm.Visible = false;
             //Form.ActiveForm.ShowDialog();
             //Application.Run(new Form2());
@@ -253,17 +271,17 @@ namespace Projekt_Laerm
                 
                 for(i = 0 ; i <= AnzMesspunkte ; i++)
                 {
-                    dx = (TimeStamp[i] - TimeStamp[0]);
+                    dx = ( TimeStamp[i] - TimeStamp[0]);
                     dx = dx / MessDauer;
                     nx = Convert.ToInt32(dx * AuflX);
 
                     dy = dB[i] - 20;
                     dy = (dy / 100) * AuflY;
                     ny = Convert.ToInt32(dy);
-                    SetKreis2(nx, AuflY - ny, 10, 0xffff1111);
+                    SetKreis2(nx, AuflY - ny, 10, i, 0xffff1111);
 
                     if (preny + prenx > 0)
-                        SetKreis2((nx + prenx) / 2, AuflY - ((ny + preny) / 2), 6, 0xffaa66dd);
+                        //SetKreis2((nx + prenx) / 2, AuflY - ((ny + preny) / 2), 6, 0xffaa66dd);
 
                     prenx = nx; preny = ny;
                 }
@@ -280,7 +298,7 @@ namespace Projekt_Laerm
             }
 
             // Cursor zeichnen
-            SetKreis2(xpos2, ypos2, 5, 0x7f226622);
+            SetKreis2(xpos2, ypos2, 5, -1, 0x7f226622);
             for (x = 0; x < xpos2; x++)
             {
                 SetPixel2(x, ypos2, 0x111111);

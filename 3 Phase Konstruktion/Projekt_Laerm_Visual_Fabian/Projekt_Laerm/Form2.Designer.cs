@@ -63,7 +63,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(512, 512);
             this.pictureBox2.TabIndex = 29;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label8
             // 
@@ -81,7 +80,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(92, 387);
+            this.textBox3.Size = new System.Drawing.Size(180, 387);
             this.textBox3.TabIndex = 38;
             this.textBox3.Text = "14/11/22 - 00:00:00:123";
             // 
@@ -90,10 +89,11 @@
             this.button1.Location = new System.Drawing.Point(592, 553);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 20);
+            this.button1.Size = new System.Drawing.Size(180, 20);
             this.button1.TabIndex = 37;
             this.button1.Text = "Wert anpassen";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -110,7 +110,7 @@
             this.textBox2.Location = new System.Drawing.Point(592, 118);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 20);
+            this.textBox2.Size = new System.Drawing.Size(180, 20);
             this.textBox2.TabIndex = 35;
             this.textBox2.Text = "14/11/22 - 00:00";
             // 
@@ -119,7 +119,7 @@
             this.textBox1.Location = new System.Drawing.Point(592, 76);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 20);
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 34;
             this.textBox1.Text = "65,50";
             // 
@@ -141,7 +141,6 @@
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 40;
             this.label1.Text = "120 dB";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -174,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 615);
+            this.ClientSize = new System.Drawing.Size(791, 615);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
