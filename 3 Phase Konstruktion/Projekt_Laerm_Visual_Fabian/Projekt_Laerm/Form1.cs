@@ -186,6 +186,7 @@ namespace Projekt_Laerm
         {
             if (M >= 0)
             {
+                Form2return = dB[M];
                 Form2 DatenDialog = new Form2(M, TimeStamp[M], dB[M]);
                 //string Text;
 
