@@ -32,6 +32,14 @@ namespace Projekt_Laerm
             aTimer.Enabled = true;
         }
 
+        public void FensterSchliessen(object source, ElapsedEventArgs e)
+        {
+            aTimer.Enabled = false;
+            aTimer.Dispose();
+
+            button1_Click(null, null);
+        }
+
         public void DatenvomGServer(object source, ElapsedEventArgs e)
         {
             aTimer.Enabled = false;
@@ -43,6 +51,11 @@ namespace Projekt_Laerm
                 myClient.DownloadFile("http://xn--grtzner-o2a.com/index.php?f=GetData", Pfad);
                 Fertig = true;
                 button1.BackColor = Color.Green;
+
+                aTimer = new System.Timers.Timer();
+                aTimer.Elapsed += new ElapsedEventHandler(FensterSchliessen);
+                aTimer.Interval = 200;                                           // alle 20 ms die Mal-Prozedur aufrufen -> entspricht 50 Hertz
+                aTimer.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -53,7 +66,10 @@ namespace Projekt_Laerm
         private void button1_Click(object sender, EventArgs e)
         {
             if (Fertig)
+            {
+                this.Dispose();
                 this.Close();
+            }
         }
     }
 }
